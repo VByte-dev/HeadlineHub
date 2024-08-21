@@ -1,0 +1,229 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: oddVal;
+  position: relative;
+}
+/* Fonts */
+@font-face{
+  font-family: oddVal;
+  src: url(Fonts/OddvalText-SemiBold.ttf);
+}
+/* Navbar */
+.nav{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-family: oddVal;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  margin: 70px 100px;
+  border-radius: 5px;
+}
+.nav h1{
+  font-weight: bold;
+}
+/* Home */
+.home{
+  margin: 100px 100px;
+}
+.home #homeInput{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.home #homeInput select{
+  padding: 10px;  
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(0, 0, 0);
+  outline: none;
+  font-family: oddVal;
+  height: 50px;
+  width: 200px;
+  appearance: none;
+  text-align: center;
+  transition: 0.2s linear 0s;
+  font-weight: bold;
+}
+option{
+  font-size: larger;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  appearance: none;
+  width: 100%;
+  border-radius: 0%;
+}
+.home #homeInput button{
+  height: 50px;
+  width: 200px;
+  padding: 10px;  
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
+  outline: none;
+  font-family: oddVal;
+  transition: 0.1s linear 0s;
+  font-weight: bolder;
+}
+.newsBox{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  margin: 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  align-items: center;
+  border: 2px solid rgb(0, 0, 0,0.7);
+  padding: 40px 100px;
+  transition: 0.1s linear 0s;
+  rotate: 0deg;
+}
+.newsBox h2{
+  color: rgb(0, 0, 0);
+}
+.newsBox h4{
+  color: rgba(0, 0, 0,0.7);
+}
+.newsBox button{
+  height: 50px;
+  width: 100px;
+  padding: 10px;  
+  border: 2px solid rgb(0, 0, 0);
+  font-size: medium;
+  background-color: rgba(255, 255, 255);
+  color: rgb(0, 0, 0);
+  outline: none;
+  font-family: oddVal;
+  transition: 0.2s linear 0s;
+}
+
+/* Footer */
+.footer{
+  margin-top: 200px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 50px;
+}
+
+/* Animation & Others */
+.newsBox:hover  button{
+  background-color: orange;
+  color: black;
+  border: 2px solid rgb(0, 0, 0);
+}
+.home #homeInput select:hover{
+  border: 3px solid orange;
+  color: black;
+}
+.home #homeInput button:hover{
+  border: 2px solid black;
+  color: black;
+  background-color: orange;
+}
+
+.newsBox:hover {
+  rotate: -1.5deg;
+  border: 3px solid black;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+h2::selection,h3::selection,h4::selection{
+  background-color: orange;
+}
+h1::selection{
+  background-color: rgba(0, 0, 0, 0);
+  color: orange;
+}
+
+/* Responsive miximum width 500 */
+@media(max-width:500px){
+  /* Navbar */
+  .nav{
+    margin: 30px;
+    padding: 20px 30px;
+  }
+  .nav h1{
+    font-size: large;
+  }
+  #logo{
+    height: 30px;
+    width: 30px;
+  }
+  /* Home */
+  .home{
+    margin: 50px 30px;
+  }
+  .home #homeInput{
+    display: block;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .home #homeInput select{
+    margin-bottom: 10px;
+    padding: 5px;  
+    font-size: small;
+    height: 40px;
+    width: 100%;
+  }
+  .home #homeInput button{
+    margin-bottom: 10px;
+    padding: 5px;  
+    font-size: small;
+    height: 40px;
+    width: 100%;
+  }
+
+  /* News Body */
+  .newsBox{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0,0.7);
+    padding: 20px 20px;
+    display: block;
+  }
+  .newsBox h2{
+    color: rgb(0, 0, 0);
+    font-size: medium;
+    font-weight: bold;
+  }
+  .newsBox h4{
+    color: rgba(0, 0, 0,0.7);
+    font-size: small;
+    font-weight: lighter;
+  }
+  .newsBox button{
+    margin-top: 10px;
+    height: 40px;
+    width: 100px;
+    padding: 5px;  
+    border: 2px solid rgb(0, 0, 0);
+    font-size: small;
+    background-color: rgba(255, 255, 255);
+    color: rgb(0, 0, 0);
+    outline: none;
+    font-family: oddVal;
+    transition: 0.2s linear 0s;
+  }
+}
