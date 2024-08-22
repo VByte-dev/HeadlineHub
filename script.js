@@ -3,7 +3,7 @@ let category = document.querySelector('#category');
 
 // Fetching the data
 const news = async (co, ca)=>{
-  const rData = await fetch(`https://newsapi.org/v2/top-headlines?country=${co}&category=${ca}&apiKey=cfd66b25c2b8425482b9a7a47b44bdf3`, {
+  const rData = await fetch(`https://newsapi.org/v2/top-headlines?country=${co}&category=${ca}&apiKey=${"Your API KEY"}`, {
     method:'GET',
     headers: {}
   });
